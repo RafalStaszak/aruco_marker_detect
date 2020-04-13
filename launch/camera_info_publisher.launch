@@ -1,0 +1,19 @@
+<launch>
+    <arg name="camera" default="/kinect_head/hd"/>
+
+    <param name="frame_id" value="584" type="str"/>
+    <param name="image_width" value="640" type="int"/>
+    <param name="image_height" value="480" type="int"/>
+
+    <param name="fx" value="1144.361" type="double"/>
+    <param name="fy" value="1147.337" type="double"/>
+    <param name="cx" value="966.359" type="double"/>
+    <param name="cy" value="548.038" type="double"/>
+
+    <param name="distortion_coefficients" value="0.108 -0.125 0.062 -0.001 -0.003" />
+    <param name="distortion_model" value="plumb_bob"/>
+  
+    <node pkg="aruco_marker_detect" name="camera_info_publisher" type="camera_info_publisher.py" output="screen">
+        <remap from="/camera_info" to="$(arg camera)/camera_info"/>
+    </node>
+</launch>
