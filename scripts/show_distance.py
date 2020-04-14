@@ -1,21 +1,21 @@
 #!/usr/bin/env python
 
+import sys
 import rospy
-import numpy as np
-import tf
-import geometry_msgs.msg
-from std_msgs.msg import Float32
+from aruco_marker_detect.srv import TfPair
 
-if __name__ == '__main__':
-    rospy.init_node('show_distance')
 
-    listener = tf.TransformListener()
+def show_distance_client(x, y):
+    ### write your own code here ###
+    pass
 
-    rate = rospy.Rate(10.0)
 
-    while not rospy.is_shutdown():
-        try:
-            (trans, rot) = listener.lookupTransform('marker_64', 'kinect_head', rospy.Time(0))
-        except (tf.LookupException, tf.ConnectivityException, tf.ExtrapolationException):
-            continue
-    rate.sleep()
+if __name__ == "__main__":
+    if len(sys.argv) == 3:
+        x = int(sys.argv[1])
+        y = int(sys.argv[2])
+    else:
+        print 'Too few arguments'
+        sys.exit(1)
+
+    # print distance between tf.a and tf.b

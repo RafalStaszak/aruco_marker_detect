@@ -5,7 +5,7 @@ import numpy as np
 from fiducial_msgs.msg import FiducialArray
 from sensor_msgs.msg import Image
 from cv_bridge import CvBridge
-import cv2
+
 
 
 class Callbacks:
