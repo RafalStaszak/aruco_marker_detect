@@ -12,8 +12,8 @@ def show_distance_client(x, y):
 
 if __name__ == "__main__":
     if len(sys.argv) == 3:
-        x = int(sys.argv[1])
-        y = int(sys.argv[2])
+        x = sys.argv[1]
+        y = sys.argv[2]
     else:
         print 'Too few arguments'
         sys.exit(1)
