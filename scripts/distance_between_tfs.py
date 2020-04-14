@@ -13,7 +13,7 @@ def distance_tf_pair(req):
     ###(trans, rot) = listener.lookupTransform('tf_a', 'tf_b', rospy.Time(0))
 
 
-def add_two_ints_server():
+def distance_between_tfs_server():
     rospy.init_node('distance_between_tfs_server')
     s = rospy.Service('distance_between_tfs', TfPair, distance_tf_pair)
     print "Ready to compute transformation."
@@ -21,4 +21,4 @@ def add_two_ints_server():
 
 
 if __name__ == "__main__":
-    add_two_ints_server()
+    distance_between_tfs_server()
