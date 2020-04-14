@@ -1,0 +1,6 @@
+<launch>
+    <arg name="parent_id" default="kinect_head"/>
+    <param name="parent" value="$(arg parent_id)" type="str"/>
+    <node pkg="aruco_marker_detect" name="fiducials_to_tfs" type="fiducials_to_tfs.py" output="screen">
+    </node>
+</launch>

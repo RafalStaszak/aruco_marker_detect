@@ -4,12 +4,10 @@ import rospy
 from fiducial_msgs.msg import FiducialTransformArray
 import tf
 
-
 def callback(data):
     br = tf.TransformBroadcaster()
 
     parent = rospy.get_param('parent', 'map')
-
     for x in data.transforms:
         idx = x.fiducial_id
         t = x.transform.translation
