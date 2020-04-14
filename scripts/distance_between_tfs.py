@@ -15,7 +15,7 @@ def distance_tf_pair(req):
 
 def add_two_ints_server():
     rospy.init_node('distance_between_tfs_server')
-    s = rospy.Service('distance_between_tfs', TfPair, distance_tf_pair())
+    s = rospy.Service('distance_between_tfs', TfPair, distance_tf_pair)
     print "Ready to add two ints."
     rospy.spin()
 
