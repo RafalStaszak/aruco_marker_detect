@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import sys
 import rospy
@@ -15,7 +15,7 @@ if __name__ == "__main__":
         x = sys.argv[1]
         y = sys.argv[2]
     else:
-        print 'Too few arguments'
+        print('Too few arguments')
         sys.exit(1)
 
     # print distance between tf.a and tf.b

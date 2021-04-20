@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import rospy
 import numpy as np
@@ -16,7 +16,7 @@ def distance_tf_pair(req):
 def distance_between_tfs_server():
     rospy.init_node('distance_between_tfs_server')
     s = rospy.Service('distance_between_tfs', TfPair, distance_tf_pair)
-    print "Ready to compute transformation."
+    print("Ready to compute transformation.")
     rospy.spin()
 
 
